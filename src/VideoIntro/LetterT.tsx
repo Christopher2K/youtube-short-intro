@@ -1,7 +1,7 @@
 import { useCurrentFrame, useVideoConfig } from 'remotion'
 
 import { LETTER_PRIMITIVES } from '../config'
-import { Square } from './Square'
+import { Direction, Square } from './Square'
 
 export type LetterTProps = {}
 
@@ -31,6 +31,7 @@ export const LetterT = ({}: LetterTProps) => {
     >
       {/* HORIZONTAL BAR */}
       <Square
+        animationDirection={Direction.fromLeft}
         frame={frame}
         startingFrame={0}
         endingFrame={animatedFramesForEachSquare - 1}
@@ -41,6 +42,7 @@ export const LetterT = ({}: LetterTProps) => {
       />
 
       <Square
+        animationDirection={Direction.fromLeft}
         frame={frame}
         startingFrame={animatedFramesForEachSquare - 1}
         endingFrame={animatedFramesForEachSquare * 2 - 1}
@@ -50,6 +52,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromTop}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 2 - 1}
         endingFrame={animatedFramesForEachSquare * 3 - 1}
@@ -59,6 +62,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromRight}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 3 - 1}
         endingFrame={animatedFramesForEachSquare * 4 - 1}
@@ -68,6 +72,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromRight}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 4 - 1}
         endingFrame={animatedFramesForEachSquare * 5 - 1}
@@ -78,6 +83,7 @@ export const LetterT = ({}: LetterTProps) => {
       />
 
       <Square
+        animationDirection={Direction.fromBottom}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 5 - 1}
         endingFrame={animatedFramesForEachSquare * 6 - 1}
@@ -87,6 +93,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromBottom}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 6 - 1}
         endingFrame={animatedFramesForEachSquare * 7 - 1}
@@ -96,6 +103,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromBottom}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 7 - 1}
         endingFrame={animatedFramesForEachSquare * 8 - 1}
@@ -105,6 +113,7 @@ export const LetterT = ({}: LetterTProps) => {
         spacing={LETTER_PRIMITIVES.squarePadding}
       />
       <Square
+        animationDirection={Direction.fromBottom}
         frame={frame}
         startingFrame={animatedFramesForEachSquare * 8 - 1}
         endingFrame={animatedFramesForEachSquare * 9 - 1}
