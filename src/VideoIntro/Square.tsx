@@ -34,6 +34,7 @@ export const Square = ({
   const realTimeXPosition = interpolateWithSquareValue(
     getXRangeFromAnimationDirection()
   )
+
   const realTimeYPosition = interpolateWithSquareValue(
     getYRangeFromAnimationDirection()
   )
