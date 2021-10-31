@@ -3,9 +3,9 @@ import { useCurrentFrame, useVideoConfig } from 'remotion'
 import { LETTER_PRIMITIVES } from '../config'
 import { Direction, Square, SquareProps } from './Square'
 
-export type LetterTProps = {}
+export type LetterCProps = {}
 
-export const LetterT = ({}: LetterTProps) => {
+export const LetterC = ({}: LetterCProps) => {
   const { width, height, durationInFrames } = useVideoConfig()
   const frame = useCurrentFrame()
 
@@ -19,52 +19,63 @@ export const LetterT = ({}: LetterTProps) => {
     SquareProps,
     'animationDirection' | 'x' | 'y'
   >[] = [
-    // HORIZONTAL BAR
+    // VERTICAL BAR
     {
       animationDirection: Direction.fromLeft,
       x: LETTER_PRIMITIVES.squarePadding,
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
+    },
+    {
+      animationDirection: Direction.fromBottom,
+      x: LETTER_PRIMITIVES.squarePadding,
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize(),
+    },
+    {
+      animationDirection: Direction.fromTop,
+      x: LETTER_PRIMITIVES.squarePadding,
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 3,
+    },
+    // TOP BAR
+    {
+      animationDirection: Direction.fromLeft,
+      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize(),
       y: LETTER_PRIMITIVES.squarePadding,
     },
     {
       animationDirection: Direction.fromLeft,
-      y: LETTER_PRIMITIVES.squarePadding,
-      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize(),
-    },
-    {
-      animationDirection: Direction.fromTop,
-      y: LETTER_PRIMITIVES.squarePadding,
       x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
+      y: LETTER_PRIMITIVES.squarePadding,
     },
     {
-      animationDirection: Direction.fromRight,
-      y: LETTER_PRIMITIVES.squarePadding,
+      animationDirection: Direction.fromLeft,
       x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 3,
+      y: LETTER_PRIMITIVES.squarePadding,
+    },
+    {
+      animationDirection: Direction.fromLeft,
+      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
+      y: LETTER_PRIMITIVES.squarePadding,
+    },
+    // BOTTOM BAR
+    {
+      animationDirection: Direction.fromRight,
+      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
     },
     {
       animationDirection: Direction.fromRight,
-      y: LETTER_PRIMITIVES.squarePadding,
-      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
-    },
-    // VERTICAL BAR
-    {
-      animationDirection: Direction.fromBottom,
-      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize(),
-      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
-    },
-    {
-      animationDirection: Direction.fromBottom,
-      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
-      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
-    },
-    {
-      animationDirection: Direction.fromBottom,
-      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 3,
-      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
-    },
-    {
-      animationDirection: Direction.fromBottom,
+      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 3,
       y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
+    },
+    {
+      animationDirection: Direction.fromRight,
       x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 2,
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
+    },
+    {
+      animationDirection: Direction.fromRight,
+      x: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize(),
+      y: LETTER_PRIMITIVES.squarePadding + LETTER_PRIMITIVES.squareSize() * 4,
     },
   ]
 

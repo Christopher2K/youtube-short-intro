@@ -1,6 +1,7 @@
 import { Composition } from 'remotion'
 
 import { LetterT } from './VideoIntro/LetterT'
+import { LetterC } from './VideoIntro/LetterC'
 
 export const RemotionVideo: React.FC = () => {
   return (
@@ -8,6 +9,14 @@ export const RemotionVideo: React.FC = () => {
       <Composition
         id="LetterT"
         component={LetterT}
+        durationInFrames={60 * 3}
+        fps={60}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="LetterC"
+        component={LetterC}
         durationInFrames={60 * 3}
         fps={60}
         width={1920}
