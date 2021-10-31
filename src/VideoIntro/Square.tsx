@@ -86,7 +86,7 @@ export const Square = ({
         y={spacing}
         width={innerRectSize}
         height={innerRectSize}
-        fill="#000000"
+        fill="#99A8FF"
       />
     </svg>
   )

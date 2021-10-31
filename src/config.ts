@@ -7,6 +7,9 @@ export const letterSize = squareSize * squareDivision + squarePadding * 2
 
 export const trueOrigin = squarePadding // We need this because we are starting to draw square after applying a padding to them
 
+const spacingBetweenLetters = squareSize * 2
+export const logoWidth = letterSize * 3 + spacingBetweenLetters
+
 export function getOrigin({ after }: { after: number }): number {
   return trueOrigin + squareSize * after
 }

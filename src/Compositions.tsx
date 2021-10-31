@@ -1,7 +1,8 @@
 import { Composition } from 'remotion'
 
-import { letterSize } from './config'
+import { letterSize, logoWidth } from './config'
 import * as Letter from './VideoIntro/Letter'
+import { Logo } from './VideoIntro/Logo'
 import { VideoIntro } from './VideoIntro'
 
 export const Compositions: React.FC = () => {
@@ -14,6 +15,14 @@ export const Compositions: React.FC = () => {
         fps={60}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="Logo"
+        component={Logo}
+        durationInFrames={60 * 4}
+        fps={60}
+        width={logoWidth}
+        height={letterSize}
       />
       <Composition
         id="T"

@@ -1,10 +1,8 @@
-import { letterSize, squareSize } from '../config'
+import { letterSize, logoWidth } from '../config'
 
 import * as Letter from './Letter'
 
 export const VideoIntro = () => {
-  const fullLogoWidth = letterSize * 3 + squareSize * 2
-
   return (
     <div
       style={{
@@ -12,7 +10,7 @@ export const VideoIntro = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#2D2D2D',
       }}
     >
       <div
@@ -21,7 +19,7 @@ export const VideoIntro = () => {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          width: fullLogoWidth,
+          width: logoWidth,
         }}
       >
         <Letter.T lastFrame={120} />
