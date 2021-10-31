@@ -1,14 +1,12 @@
-export const LETTER_PRIMITIVES = {
-  // A letter is a big square
-  // The size of this square is 5 subsquare
-  baseLetterSize: 300,
-  squareDivision: 5,
-  squarePadding: 3,
+const baseLetterSize = 300
+const squareDivision = 5 // How many squares we can have in row / column of a letter
 
-  squareSize: function () {
-    return this.baseLetterSize / this.squareDivision + this.squarePadding * 2
-  },
-  letterSize: function () {
-    return this.squareSize() * this.squareDivision
-  },
+export const squarePadding = 3
+export const squareSize = baseLetterSize / squareDivision + squarePadding * 2
+export const letterSize = squareSize * squareDivision + squarePadding * 2
+
+export const trueOrigin = squarePadding // We need this because we are starting to draw square after applying a padding to them
+
+export function getOrigin({ after }: { after: number }): number {
+  return trueOrigin + squareSize * after
 }
